@@ -10,21 +10,29 @@ using Prestamos;
 public class SolicitudPrestamoController : ControllerBase
 {
     private readonly ISolcitudPrestamoService service;
+    private readonly List<SolicitudPrestamo> solicitudes;
+
     public SolicitudPrestamoController(ISolcitudPrestamoService s)
     {
         service = s;
+        solicitudes = new List<SolicitudPrestamo>(){};
     }
-    [HttpGet("EnviarSolicitud")]
-    public IActionResult EnviarSoli(SolicitudPrestamo soli)
+    [HttpGet("EnviarSolicitud{id_Item}")]
+    public IActionResult EnviarSoli(int id_Item)
     {
-        var result = service.Enviar_Solicitud(soli);
-        return Ok(result);
+        var result = service.Enviar_Solicitud(id_Item);
+        if(result){
+            var solicitud = new SolicitudPrestamo();
+            solicitudes.Add(solicitud);
+            return Ok("agregacion correcta");
+        }
+        return Ok("agregacion no completada");
     }
 
-    [HttpGet("VerSolicitudes")]
-    public IActionResult VerSoli(int idUser)
+    [HttpGet("VerSolicitudes{idUser}")]
+    public IEnumerable VerSoli(int idUser)
     {
         var result = service.VerSolicitudes(idUser);
-        return Ok(result);
+        return Ok(solicitudes);
     }
 }

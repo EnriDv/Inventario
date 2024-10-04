@@ -9,7 +9,7 @@ public interface ISolcitudPrestamoService{
 
 
 public class SolicitudPrestamoService: ISolcitudPrestamoService{
-    public bool Enviar_Solicitud(SolicitudPrestamo solicitud){
+    public bool Enviar_Solicitud(int solicitud){
         return true;
     }
     public List<SolicitudPrestamo> VerSolicitudes(int id_User){
