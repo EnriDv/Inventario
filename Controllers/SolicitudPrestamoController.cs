@@ -15,7 +15,11 @@ public class SolicitudPrestamoController : ControllerBase
     public SolicitudPrestamoController(ISolcitudPrestamoService s)
     {
         service = s;
-        solicitudes = new List<SolicitudPrestamo>(){};
+        solicitudes = new List<SolicitudPrestamo>(){
+            new SolicitudPrestamo(),
+            new SolicitudPrestamo(),
+            new SolicitudPrestamo()
+        };
     }
     [HttpGet("EnviarSolicitud{id_Item}")]
     public IActionResult EnviarSoli(int id_Item)
@@ -29,10 +33,10 @@ public class SolicitudPrestamoController : ControllerBase
         return Ok("agregacion no completada");
     }
 
-    [HttpGet("VerSolicitudes{idUser}")]
-    public IEnumerable VerSoli(int idUser)
+    [HttpGet("VerSolicitudes")]
+    public IEnumerable<SolicitudPrestamo> VerSoli()
     {
-        var result = service.VerSolicitudes(idUser);
-        return Ok(solicitudes);
+        var result = service.VerSolicitudes(1);
+        return solicitudes;
     }
 }

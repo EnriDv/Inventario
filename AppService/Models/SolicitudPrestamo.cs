@@ -5,4 +5,5 @@ public class SolicitudPrestamo{
     int Id_Equipo {get; set;}
     string Detalle {get; set;} = null!;
     string Estado_solicitud {get; set;} = null!;
+    
 }
