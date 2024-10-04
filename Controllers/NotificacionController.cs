@@ -12,11 +12,11 @@ public class NotificacionController : ControllerBase
         service = s;
     }
 
-    
+
     [HttpGet("noti")]
-    public IActionResult ObtenerRespuestaSolicitud( int id)
+    public IActionResult MostrarEquipos()
     {
         service.Respuesta_Solicitud();
-        return Ok(id);
+        return Ok();
     }
 }
