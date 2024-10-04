@@ -13,9 +13,9 @@ public class EquipoController : ControllerBase
     }
 
     [HttpGet("equipos")]
-    public IActionResult<List<Equipos>> MostrarEquipos()
+    public IEnumerable<Equipos> MostrarEquipos()
     {
-        List<Equipos> list = service.MostrarEquipos();
-        return Ok(list);
+        var list = service.MostrarEquipos();
+        return list;
     }
 }
