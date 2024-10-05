@@ -1,4 +1,4 @@
-namespace Prestamos.Services;
+namespace Inventario.Services;
 
 public interface INotificacionService{
     public void Respuesta_Solicitud();

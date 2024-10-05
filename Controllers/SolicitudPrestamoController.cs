@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Mvc;
-using Prestamos.Services;
-using Prestamos;
+using Inventario.Services;
+using Inventario;
 
 
 
@@ -21,22 +21,21 @@ public class SolicitudPrestamoController : ControllerBase
             new SolicitudPrestamo()
         };
     }
-    [HttpGet("EnviarSolicitud{id_Item}")]
-    public IActionResult EnviarSoli(int id_Item)
+    [HttpPost("EnviarSolicitud")]
+    public IActionResult EnviarSoli([FromBody] SolicitudPrestamo solicitud)
     {
-        var result = service.Enviar_Solicitud(id_Item);
+        var result = service.Enviar_Solicitud(solicitud);
         if(result){
-            var solicitud = new SolicitudPrestamo();
             solicitudes.Add(solicitud);
             return Ok("agregacion correcta");
         }
         return Ok("agregacion no completada");
     }
 
-    [HttpGet("VerSolicitudes")]
-    public IEnumerable<SolicitudPrestamo> VerSoli()
+    [HttpGet("VerSolicitudes{id}")]
+    public IEnumerable<SolicitudPrestamo> VerSoli(int id)
     {
-        var result = service.VerSolicitudes(1);
-        return solicitudes;
+        var result = service.VerSolicitudes(id);
+        return result;
     }
 }

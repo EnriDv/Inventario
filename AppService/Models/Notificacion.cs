@@ -1,4 +1,4 @@
-namespace Prestamos;
+namespace Inventario;
 
 public class Notificacion{
     string Cod_notificacion {get; set;} = null!;

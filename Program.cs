@@ -1,10 +1,13 @@
-using Prestamos.Services;
+using Inventario.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+//inyeccion
+
+
 builder.Services.AddScoped<ISolcitudPrestamoService, SolicitudPrestamoService>();
 builder.Services.AddScoped<INotificacionService, NotificacionService>();
 
