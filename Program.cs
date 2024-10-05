@@ -4,6 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<ISolPrestamoService, SolPrestamoService>();
+builder.Services.AddScoped<INotificacionService, NotificacionService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,6 +1,3 @@
-public interface ISolPrestamo{
-    void Enviar_Solicitud();
-    void Recibir_Solicitud();
-    void Validar_Solicitud();
-    void Almacenar_Solicitud();
+public interface ISolPrestamoService{
+    public void Enviar_Solicitud(int Id_Equipo, string Detalle);
 }

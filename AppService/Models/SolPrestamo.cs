@@ -1,6 +1,6 @@
 public class SolPrestamo{
-    int Id_solicitud {get; set;}
-    int Id_Equipo {get; set;}
-    string Detalle {get; set;}
-    string Estado_solicitud {get; set;}
+    public int Id_solicitud {get; set;}
+    public int Id_Equipo {get; set;}
+    public string Detalle {get; set;}
+    public string Estado_solicitud {get; set;}
 }

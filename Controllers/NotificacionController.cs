@@ -1,21 +1,19 @@
-using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Mvc;
-using Prestamos.Service;
 
 
 [ApiController]
 [Route("[controller]")]
-public class RegistrarPrestamoController : ControllerBase
+public class NotificacionController : ControllerBase
 {
-    private readonly IRegistrarPrestamoService service;  //readonly para solo lectura
-    public RegistrarPrestamoController(IRegistrarPrestamoService s)
+    private readonly INotificacionService service;  //readonly para solo lectura
+    public NotificacionController(INotificacionService s)
     {
         service = s;
     }
     [HttpGet("Items")]
-    public IActionResult ObtenerDetalleItems( int id)
+    public IActionResult EnviarNoti()
     {
-        var list = service.detalleItem(id);
-        return Ok(list);
+        service.Enviar_Notificacion();
+        return Ok();
     }
 }
