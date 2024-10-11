@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<INotificacionService, NotificacionService>();
-builder.Services.AddScoped<IEquipoService, EquipoService>();
+builder.Services.AddSingleton<IEquipoService, EquipoService>();
 
 var app = builder.Build();
 

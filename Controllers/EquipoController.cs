@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 [Route("[controller]")]
 public class EquipoController : ControllerBase
 {
-    public IEnumerable<Equipos>? list;
     private readonly IEquipoService service;  //readonly para solo lectura
     public EquipoController(IEquipoService s)
     {

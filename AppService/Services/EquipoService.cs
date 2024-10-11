@@ -1,24 +1,20 @@
 public class EquipoService : IEquipoService
 {
-    public bool RegistrarEquipo( Equipos equipo )
+    public bool RegistrarEquipo(Equipos equipo)
     {
-        foreach(Equipos e in EquiposRegistrados)
+        foreach (Equipos e in EquiposRegistrados)
         {
-            if( e.Codigo_Equipo == equipo.Codigo_Equipo)
+            if (e.Codigo_Equipo == equipo.Codigo_Equipo)
             {
-                return false;
+                return false; // No se puede agregar un equipo con el mismo código
             }
-            else if( e.Estado_Equipo != "Disponible")
+            else if (equipo.Estado_Equipo != "Disponible")
             {
-                return false;
-            }
-            else
-            {
-                EquiposRegistrados.Add(equipo);
-                return true;
+                return false; // No se puede agregar un equipo si no está disponible
             }
         }
-        return false;
+        EquiposRegistrados.Add(equipo);
+        return true;
     }
     public List<Equipos> MostrarEquipos()
     {
