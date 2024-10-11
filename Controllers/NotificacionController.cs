@@ -13,7 +13,6 @@ public class NotificacionController : ControllerBase
     [HttpGet("Items")]
     public IActionResult EnviarNoti()
     {
-        service.Enviar_Notificacion();
-        return Ok();
+        return Ok(service.Enviar_Notificacion());
     }
 }

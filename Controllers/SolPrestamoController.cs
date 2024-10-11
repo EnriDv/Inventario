@@ -10,10 +10,20 @@ public class RegistrarPrestamoController : ControllerBase
     {
         service = enviar;
     }
-    [HttpGet("Enviar")]
-    public IActionResult EnviarSol(int Id_Equipo, string Detalle)
+    [HttpPost("Enviar")]
+    public IActionResult EnviarSol([FromBody] SolicitudDTO solicitud)
     {
-        service.Enviar_Solicitud(Id_Equipo, Detalle);
-        return Ok();
+        service.Enviar_Solicitud(solicitud.Id_Equipo, solicitud.Detalle);
+        return Ok("Aloha");
     }
+
+
+    public class SolicitudDTO
+    {
+        public int Id_Equipo { get; set; }
+        public string Detalle { get; set; }
+    }
+
 }
+
+

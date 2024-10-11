@@ -4,9 +4,9 @@ public class NotificacionService: INotificacionService
     {
 
     }
-    public void Enviar_Notificacion()
+    public string Enviar_Notificacion()
     {
-
+        return "me maman los negros";
     }
     public Notificacion Crear_Notificacion()
     {

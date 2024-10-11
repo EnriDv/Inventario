@@ -55,4 +55,9 @@ public class SolPrestamoService: ISolPrestamoService
             Estado_solicitud = "En espera."
         };
     }
+
+    List<SolPrestamo> solicitudes = new List<SolPrestamo> 
+    {
+        
+    };
 }
