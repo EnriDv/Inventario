@@ -24,7 +24,7 @@ public class EquipoController : ControllerBase
     {
         if(service.RegistrarEquipo(nuevoEquipo))
         {
-            return Ok("Se registro Correctamente el Usuario.");
+            return Ok();
         }
         return Ok("Ha ocurrido un error al registrar el usuario.");
     }

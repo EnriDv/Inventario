@@ -36,7 +36,7 @@ export class testComponent {
     };
 
     // Hacer la solicitud POST
-    this.http.post<string>(this.baseUrl + 'equipo/addEquipos', nuevoEquipo)
+    this.http.post<any>(this.baseUrl + 'equipo/addEquipo', nuevoEquipo)
       .subscribe(
         result => {
           console.log('Success:', result);
