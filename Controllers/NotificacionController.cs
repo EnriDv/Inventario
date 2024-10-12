@@ -1,8 +1,7 @@
 using System.Runtime.CompilerServices;
 using Microsoft.AspNetCore.Mvc;
-using Prestamos.Service;
 
-
+/*
 [ApiController]
 [Route("[controller]")]
 public class RegistrarPrestamoController : ControllerBase
@@ -19,3 +18,4 @@ public class RegistrarPrestamoController : ControllerBase
         return Ok(list);
     }
 }
+*/
