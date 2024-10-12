@@ -1,6 +1,6 @@
 public class EquipoService : IEquipoService
 {
-    public bool RegistrarEquipo(Equipos equipo)
+    /*public bool RegistrarEquipo(Equipos equipo)
     {
         foreach (Equipos e in EquiposRegistrados)
         {
@@ -48,5 +48,5 @@ public class EquipoService : IEquipoService
             Estado_Equipo = "Disponible",
             Detalle_equipo = "algo rayado"
         },
-    };
+    };*/
 }

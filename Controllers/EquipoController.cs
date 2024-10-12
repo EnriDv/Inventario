@@ -11,7 +11,7 @@ public class EquipoController : ControllerBase
     {
         service = s;
     }
-
+/*
     [HttpGet("seeEquipos")]
     public IEnumerable<Equipos> MostrarEquipos()
     {
@@ -28,4 +28,5 @@ public class EquipoController : ControllerBase
         }
         return Ok("Ha ocurrido un error al registrar el usuario.");
     }
+    */
 }

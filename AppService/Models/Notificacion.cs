@@ -1,5 +1,12 @@
-public class Notificacion{
-    string Cod_notificacion {get; set;}
-    string Mensaje {get; set;}
-    int Id_solicitud {get;set;}
+public class Notificacion
+{
+    public int IdNotificacion { get; set; }
+    public Usuario Destinatario { get; set; } = null!;
+    public string Mensaje { get; set; } = null!;
+    public DateTime FechaEnvio { get; set; }
+
+    public void EnviarNotificacion()
+    {
+        
+    }
 }

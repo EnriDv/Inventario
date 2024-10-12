@@ -6,6 +6,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<INotificacionService, NotificacionService>();
 builder.Services.AddSingleton<IEquipoService, EquipoService>();
 
+builder.Services.AddSingleton<ISolicitudPrestamoService, SolicitudPrestamoService>();
+
 var app = builder.Build();
 
 
