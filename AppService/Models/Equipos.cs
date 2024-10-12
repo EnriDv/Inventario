@@ -1,5 +1,14 @@
-public class Equipos{
-    int Id_equipo {get; set;}
-    string Nombre_equipo {get; set;}
-    string Detalle_equipo {get; set;}
+
+public class Equipo
+{
+    public int Id { get; set; }
+    public string Nombre { get; set; }
+    public Categoria Categoria { get; set; }
+
+    public Equipo(int id, string nombre, Categoria categoria)
+    {
+        Id = id;
+        Nombre = nombre;
+        Categoria = categoria;
+    }
 }
