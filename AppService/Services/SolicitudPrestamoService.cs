@@ -15,13 +15,13 @@ public class SolicitudPrestamoService : ISolicitudPrestamoService
     }
     return new SolicitudPrestamo();
  }
-
+ 
 List<SolicitudPrestamo> Solicitudes = new List<SolicitudPrestamo>
 {
     new SolicitudPrestamo{
         IdSolicitud = 1,
         UsuarioSolicitante = new Usuario{nombre = "Juan", carrera = "Medicinas" },
-        EquipoSolicitado = new Equipo {Nombre_equipo = "PC1", Estado_Equipo = "Disponible", Detalle_equipo="rayón en la pantalla"},
+        EquipoSolicitado = new Equipo {idEquipo= 1, Nombre_equipo = "PC1", Estado_Equipo = "Disponible", Detalle_equipo="rayón en la pantalla"},
         FechaSolicitud = new DateTime(2024, 10, 5),
         FechaInicioPrestamo= new DateTime(2024, 10, 7),
         FechaFinPrestamo = new DateTime(2024, 12, 20),
@@ -30,7 +30,7 @@ List<SolicitudPrestamo> Solicitudes = new List<SolicitudPrestamo>
     new SolicitudPrestamo{
         IdSolicitud = 2,
         UsuarioSolicitante = new Usuario{nombre = "María", carrera = "Ingeniería Civil" },
-        EquipoSolicitado = new Equipo {Nombre_equipo = "Proyector", Estado_Equipo = "Disponible", Detalle_equipo="Conexión HDMI dañada"},
+        EquipoSolicitado = new Equipo {idEquipo= 2, Nombre_equipo = "Proyector", Estado_Equipo = "Disponible", Detalle_equipo="Conexión HDMI dañada"},
         FechaSolicitud = new DateTime(2024, 10, 6),
         FechaInicioPrestamo= new DateTime(2024, 10, 8),
         FechaFinPrestamo = new DateTime(2024, 11, 15),
@@ -39,7 +39,7 @@ List<SolicitudPrestamo> Solicitudes = new List<SolicitudPrestamo>
     new SolicitudPrestamo{
         IdSolicitud = 3,
         UsuarioSolicitante = new Usuario{nombre = "Carlos", carrera = "Arquitectura" },
-        EquipoSolicitado = new Equipo {Nombre_equipo = "Cámara DSLR", Estado_Equipo = "Disponible", Detalle_equipo="Sin lente adicional"},
+        EquipoSolicitado = new Equipo { idEquipo= 3, Nombre_equipo = "Cámara DSLR", Estado_Equipo = "Disponible", Detalle_equipo="Sin lente adicional"},
         FechaSolicitud = new DateTime(2024, 10, 9),
         FechaInicioPrestamo= new DateTime(2024, 10, 10),
         FechaFinPrestamo = new DateTime(2024, 11, 30),
