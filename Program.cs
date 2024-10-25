@@ -7,6 +7,7 @@ builder.Services.AddScoped<INotificacionService, NotificacionService>();
 builder.Services.AddSingleton<IEquipoService, EquipoService>();
 
 builder.Services.AddSingleton<ISolicitudPrestamoService, SolicitudPrestamoService>();
+builder.Services.AddSingleton<IPrestamoService, PrestamoService>();
 
 var app = builder.Build();
 
