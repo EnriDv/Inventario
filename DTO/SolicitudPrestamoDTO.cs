@@ -10,4 +10,4 @@ public class SolicitudPrestamoDTO
     public DateTime FechaInicioPrestamo { get; set; }
     public DateTime FechaFinPrestamo { get; set; }
     public EstadoSolicitud estadoSolicitud { get; set; }
-}
+}                                       
