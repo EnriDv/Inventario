@@ -11,28 +11,4 @@ public class PrestamoController : ControllerBase
     {
         serviceprestamo = servicioprestamo;
     }
-
-    [HttpGet("equipos")]
-    public IEnumerable<Equipo> MostrarEquipos()
-    {
-        return serviceprestamo.mostrar_equipos();
-    }
-
-    [HttpGet("equipos-prestados")]
-    public IEnumerable<Equipo> MostrarEquiposPrestados()
-    {
-        return serviceprestamo.mostrar_equipos_prestados();
-    }
-
-    [HttpPost("devolver-equipo")]
-    public IActionResult DetallePrestamo([FromBody] string idEquipo)
-    {
-        bool verificar = serviceprestamo.cambiar_estado_equipo(int.Parse(idEquipo));
-        if(verificar)
-        {
-            return Ok("Se devolvio el equipo correctamente");
-        }
-        return BadRequest(new { mensaje = "No se pudo devolver el equipo, verifique el ID del equipo." }); 
-    }
-
 }

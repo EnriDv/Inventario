@@ -1,30 +1,44 @@
 public class EquipoService : IEquipoService
 {
-    /*public bool RegistrarEquipo(Equipos equipo)
+    public bool RegistrarEquipo(Equipo equipo)
     {
-        foreach (Equipos e in EquiposRegistrados)
+        List<Equipo> EquiposRegistrados = new List<Equipo>();
+        foreach (Equipo e in EquiposRegistrados)
         {
-            if (e.Codigo_Equipo == equipo.Codigo_Equipo)
-            {
-                return false; // No se puede agregar un equipo con el mismo código
-            }
-            else if (equipo.Estado_Equipo != "Disponible")
-            {
-                return false; // No se puede agregar un equipo si no está disponible
-            }
+            
         }
         EquiposRegistrados.Add(equipo);
         return true;
     }
-    public List<Equipos> MostrarEquipos()
+
+    public Equipo DetalleEquipo(int id)
     {
-        return EquiposRegistrados;
+        return new Equipo();
+    }
+    public bool ActualizarEquipo(int id)
+    {
+        return true;
     }
 
-
-    public List<Equipos> EquiposRegistrados = new List<Equipos>
+    public bool EliminarEquipo(int id)
     {
-        new Equipos
+        return true;
+    }
+
+    public List<Equipo> MostrarEquipos()
+    {
+        return new List<Equipo>();
+    }
+
+    public bool cambiar_estado_equipo(int idEquipo)
+    {
+        return true;
+    }
+
+    /*
+    public List<Equipo> EquiposRegistrados = new List<Equipo>
+    {
+        new Equipo
         {
             Id_equipo = 1,
             Codigo_Equipo = "1234",
@@ -32,7 +46,7 @@ public class EquipoService : IEquipoService
             Estado_Equipo = "Disponible",
             Detalle_equipo = "nada"
         },
-        new Equipos
+        new Equipo
         {
             Id_equipo = 2,
             Codigo_Equipo = "2345",
@@ -40,7 +54,7 @@ public class EquipoService : IEquipoService
             Estado_Equipo = "Estropeado",
             Detalle_equipo = "dañado"
         },
-        new Equipos
+        new Equipo
         {
             Id_equipo = 3,
             Codigo_Equipo = "3456",
@@ -48,5 +62,6 @@ public class EquipoService : IEquipoService
             Estado_Equipo = "Disponible",
             Detalle_equipo = "algo rayado"
         },
-    };*/
+    };
+    */
 }

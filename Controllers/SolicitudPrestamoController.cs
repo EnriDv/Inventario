@@ -21,7 +21,7 @@ public class SolicitudPrestamoController : ControllerBase
     [HttpPost("detalle")]
     public IActionResult DetallePrestamo([FromBody] int IdSolicitudPrestamo)
     {
-        SolicitudPrestamo soli = service.mostrarDetalleSolicitudPrestamo(IdSolicitudPrestamo);
+        SolicitudPrestamo soli = service.DetalleSolicitudPrestamo(IdSolicitudPrestamo);
         return Ok($"{soli.UsuarioSolicitante.nombre}, {soli.EquipoSolicitado.Nombre_equipo}, {soli.estadoSolicitud}");
     }
 }

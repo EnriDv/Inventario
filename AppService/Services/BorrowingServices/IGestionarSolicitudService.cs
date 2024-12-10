@@ -1,4 +1,4 @@
-public interface IAprobacionSolicitudService
+public interface IGestionarSolicitudService
 {
     public void AprobarSolicitud(SolicitudPrestamo solicitud);
 

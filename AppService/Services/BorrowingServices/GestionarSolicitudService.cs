@@ -1,4 +1,4 @@
-public class AprobacionSolicitudService : IAprobacionSolicitudService
+public class GestionarSolicitudService : IGestionarSolicitudService
 {
     public void AprobarSolicitud(SolicitudPrestamo solicitud)
     {

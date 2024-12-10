@@ -11,22 +11,4 @@ public class EquipoController : ControllerBase
     {
         service = s;
     }
-/*
-    [HttpGet("seeEquipos")]
-    public IEnumerable<Equipos> MostrarEquipos()
-    {
-        //list = service.MostrarEquipos();
-        return service.MostrarEquipos();
-    }
-
-    [HttpPost("addEquipo")]
-    public IActionResult RegistrarEquipo([FromBody] Equipos nuevoEquipo)
-    {
-        if(service.RegistrarEquipo(nuevoEquipo))
-        {
-            return Ok();
-        }
-        return Ok("Ha ocurrido un error al registrar el usuario.");
-    }
-    */
 }

@@ -1,21 +1,34 @@
 public class SolicitudPrestamoService : ISolicitudPrestamoService
 {
- public List<SolicitudPrestamo> mostrarSolicitudesPrestamo()
- {
-    return Solicitudes;
- }
- public SolicitudPrestamo mostrarDetalleSolicitudPrestamo(int IdSolicitud)
- {
-    foreach(SolicitudPrestamo soli in Solicitudes)
+    public bool EnviarSolicitudPrestamo(SolicitudPrestamo soli)
     {
-        if (soli.EquipoSolicitado.idEquipo == IdSolicitud)
-        {
-            return soli;
-        }
+        return true;
     }
-    return new SolicitudPrestamo();
- }
- 
+    public bool ValidarSolicitud()
+    {
+        return true;
+    }
+    public List<SolicitudPrestamo> mostrarSolicitudesPrestamo()
+    {
+        return Solicitudes;
+    }
+    public SolicitudPrestamo DetalleSolicitudPrestamo(int IdSolicitud)
+    {
+        foreach(SolicitudPrestamo soli in Solicitudes)
+        {
+            if (soli.EquipoSolicitado.idEquipo == IdSolicitud)
+            {
+                return soli;
+            }
+        }
+        return new SolicitudPrestamo();
+    }
+
+    public List<SolicitudPrestamo> HistorialSolicitudPrestamo()
+    {
+        return new List<SolicitudPrestamo>();
+    }
+    
 List<SolicitudPrestamo> Solicitudes = new List<SolicitudPrestamo>
 {
     new SolicitudPrestamo{
