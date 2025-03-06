@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ISolcitudPrestamoService, SolicitudPrestamoService>();
 builder.Services.AddScoped<INotificacionService, NotificacionService>();
-builder.Services.AddSingleton<IComponentService, ComponentService>();
+//builder.Services.AddSingleton<IComponentService, ComponentService>();
 
 
 var app = builder.Build();

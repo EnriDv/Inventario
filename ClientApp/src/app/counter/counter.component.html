@@ -1,7 +1,42 @@
-<h1>Counter</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagrama con Mermaid</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="mermaid">
+        graph LR
+        A[Administrador] -->|Iniciar Sesión|> B(Inicio de Registro)
+        B --> C(Ingresar Datos de Equipo)
+        C -->|Validar Datos|> D(Validación de Datos)
+        D -->|Datos Válidos|> E(Asignar ID Único)
+        D -->|Datos Inválidos|> F(Error de Validación)
+        E --> G(Registro Exitoso)
+        G --> H(Guardar Registro)
+        H --> I(Finalizar Registro)
+        A -->|Editar/Eliminar Registro|> J(Búsqueda de Equipo por ID)
+        J --> K(Editar/Eliminar Registro)
+        K --> L(Guardar Cambios/Eliminar Registro)
+        L --> M(Finalizar Edición/Eliminación)
 
-<p>This is a simple example of an Angular component.</p>
-
-<p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
-
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+        estilo A fill:#f9f,stroke:#333,stroke-width:2px
+        estilo B fill:#fff,stroke:#333,stroke-width:2px
+        estilo C fill:#fff,stroke:#333,stroke-width:2px
+        estilo D fill:#fff,stroke:#333,stroke-width:2px
+        estilo E fill:#fff,stroke:#333,stroke-width:2px
+        estilo F fill:#f99,stroke:#333,stroke-width:2px
+        estilo G fill:#0f0,stroke:#333,stroke-width:2px
+        estilo H fill:#fff,stroke:#333,stroke-width:2px
+        estilo I fill:#f9f,stroke:#333,stroke-width:2px
+        estilo J fill:#fff,stroke:#333,stroke-width:2px
+        estilo K fill:#fff,stroke:#333,stroke-width:2px
+        estilo L fill:#fff,stroke:#333,stroke-width:2px
+        estilo M fill:#f9f,stroke:#333,stroke-width:2px
+    </div>
+</body>
+</html>
